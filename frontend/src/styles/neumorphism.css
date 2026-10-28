@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply transition-colors duration-200 select-none;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+}
+
+/* Custom Neumorphic Component Classes */
+.neu-raised {
+  background: theme('colors.neu.surface.light');
+  box-shadow: 6px 6px 14px #cbd4e1, -6px -6px 14px #ffffff;
+}
+
+.dark .neu-raised {
+  background: theme('colors.neu.surface.dark');
+  box-shadow: 6px 6px 14px #0c0e14, -6px -6px 14px #222736;
+}
+
+.neu-raised-sm {
+  background: theme('colors.neu.surface.light');
+  box-shadow: 3px 3px 7px #cbd4e1, -3px -3px 7px #ffffff;
+}
+
+.dark .neu-raised-sm {
+  background: theme('colors.neu.surface.dark');
+  box-shadow: 3px 3px 7px #0c0e14, -3px -3px 7px #222736;
+}
+
+.neu-inset {
+  background: theme('colors.neu.surface.light');
+  box-shadow: inset 3px 3px 7px #cbd4e1, inset -3px -3px 7px #ffffff;
+}
+
+.dark .neu-inset {
+  background: theme('colors.neu.surface.dark');
+  box-shadow: inset 3px 3px 7px #0c0e14, inset -3px -3px 7px #222736;
+}
+
+.neu-button {
+  background: theme('colors.neu.surface.light');
+  box-shadow: 4px 4px 8px #cbd4e1, -4px -4px 8px #ffffff;
+  transition: all 0.15s ease-in-out;
+}
+
+.neu-button:hover {
+  box-shadow: 2px 2px 5px #cbd4e1, -2px -2px 5px #ffffff;
+  transform: translateY(1px);
+}
+
+.neu-button:active {
+  box-shadow: inset 3px 3px 6px #cbd4e1, inset -3px -3px 6px #ffffff;
+  transform: translateY(2px);
+}
+
+.dark .neu-button {
+  background: theme('colors.neu.surface.dark');
+  box-shadow: 4px 4px 8px #0c0e14, -4px -4px 8px #222736;
+}
+
+.dark .neu-button:hover {
+  box-shadow: 2px 2px 5px #0c0e14, -2px -2px 5px #222736;
+}
+
+.dark .neu-button:active {
+  box-shadow: inset 3px 3px 6px #0c0e14, inset -3px -3px 6px #222736;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd4e1;
+  border-radius: 9999px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #2a3142;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #3b445c;
+}

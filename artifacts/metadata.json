@@ -1,0 +1,42 @@
+{
+  "model_name": "ReplySense-v1",
+  "algorithm": "Calibrated random_forest",
+  "trained_at": "2026-10-28 16:18:47 UTC",
+  "dataset_info": "Multi-turn Conversational Reply Benchmark (40 conversations, 600+ message turns)",
+  "sample_count": 834,
+  "conversation_count": 40,
+  "target_horizon_hours": 24.0,
+  "is_calibrated": true,
+  "calibration_method": "sigmoid (Platt scaling)",
+  "features_used": [
+    "message_length",
+    "word_count",
+    "question_mark_count",
+    "is_question",
+    "has_request_cue",
+    "emoji_count",
+    "exclamation_count",
+    "uppercase_ratio",
+    "has_url",
+    "is_media",
+    "historical_reply_rate",
+    "previous_messages_count",
+    "sender_message_count",
+    "recipient_message_count",
+    "sender_recipient_ratio",
+    "consecutive_unanswered_sender",
+    "avg_response_time_minutes",
+    "median_response_time_minutes",
+    "minutes_since_last_incoming",
+    "hour_of_day",
+    "day_of_week",
+    "is_weekend",
+    "is_recipient_active_hour"
+  ],
+  "limitations": [
+    "Assumes two primary interlocutors in standard 1-on-1 dialogue turns.",
+    "Predictions are statistical likelihoods based on timing and linguistic structure.",
+    "Real-world unexpected interruptions (offline meetings, emergencies) cannot be observed by text models.",
+    "Probabilities should be interpreted as calibrated guides rather than guaranteed human outcomes."
+  ]
+}
