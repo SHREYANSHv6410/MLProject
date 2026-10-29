@@ -1,0 +1,4 @@
+-r backend/requirements.txt
+scikit-learn>=1.5.0
+pytest>=8.0.0
+httpx>=0.27.0
